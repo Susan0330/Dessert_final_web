@@ -1,0 +1,296 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Serif TC', serif;
+}
+
+body {
+    background-color: #FEFAE0;
+    color: #534d3e;
+    font-family: Arial, sans-serif;
+}
+
+/*　動態優惠 滾動文字區塊 */
+.promo-banner {
+    background-color: #FEFAE0; 
+    color: #D5A06C; 
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* 確保廣告在最上層 */
+    overflow: hidden; 
+}
+
+/* 滾動文字動畫效果 */
+.promo-banner p {
+    white-space: nowrap; 
+    animation: scroll-text 10s linear infinite; 
+}
+
+/* 動畫效果：從右到左滾動 */
+@keyframes scroll-text {
+    0% {
+        transform: translateX(100%); /* 起始位置：從右側開始 */
+    }
+    100% {
+        transform: translateX(-100%); /* 結束位置：移到左側外面 */
+    }
+}
+
+/* Navbar樣式調整 (確保不被廣告遮擋) */
+.navbar {
+    margin-top: 50px; /* 讓導航欄距離廣告有間距 */
+    background-color: #fff;
+}
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d3b495;
+    padding: 10px 30px; /* 減少內邊距以留出更多高度 */
+    position: sticky;
+    z-index: 10;
+    height: 140px; /* 增加 navbar 的高度，確保 logo 有足夠的空間 */
+    box-sizing: border-box; /* 確保 padding 被計入高度內 */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* 添加過渡效果 */
+}
+
+.navbar.navbar-transparent {
+    background-color: rgba(204, 213, 174, 0.7); /* 透明效果 */
+    box-shadow: none; /* 去掉阴影 */
+}
+
+.site-title {
+    margin-left: 10px; /* 圖片和文字的間距 */
+    font-size: 28px; /* 字體大小 */
+    font-weight: bold; /* 字體粗細 */
+    color: #333; /* 字體顏色 */
+    font-family: Arial, Helvetica, sans-serif;/* 字體樣式 */
+    display: inline-block; /* 讓文字和圖片在同一行 */
+}
+
+.logo-link {
+    display: block;
+    margin-left: 95px; /* 調整圖片與選單之間的距離 */
+    display: flex; /* 使用 Flexbox 排列 */
+    align-items: center; /* 垂直對齊圖片 */
+    gap: 10px; /* 圖片之間的間距 */
+}
+
+.index {
+    max-width: none;
+    width: 85px;
+    height: auto;
+    margin-top: 20px; /* 根據需要調整這個數值 */
+}
+
+.index2 {
+    max-width: none;
+    width: 100px;
+    height: auto;
+    margin-top: 20px; /* 根據需要調整這個數值 */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* 選單置中 */
+    flex-grow: 1;
+}
+
+.nav-links li {
+    margin: 0 15px; /* 選單項目間距 */
+    text-align: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.nav-links a:hover {
+    color: white;
+    background-color: #988571;
+}
+
+/* 搜尋框與圖標區域 */
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* 圖標間距 */
+}
+
+.search-container {
+    position: relative; /* 建立定位上下文 */
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px; /* 搜尋框寬度 */
+    height: 30px; /* 搜尋框高度 */
+    padding-right: 30px; /* 預留空間給圖標 */
+    box-sizing: border-box; /* 包含內邊距和邊框 */
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px; /* 放大鏡圖標的水平位置 */
+    width: 18px; /* 放大鏡圖標大小 */
+    height: 18px;
+    pointer-events: none; 
+    top: 50%; 
+    transform: translateY(-50%); /* icon向上移動一點 */
+}
+
+.nav-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icon-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.icon {
+    width: 30px; 
+    height: 30px; 
+}
+/*購物車部分*/
+.steps {
+    display: flex;/*使用 Flexbox 排版模式*/
+    justify-content: center;/*水平置中所有步驟元素*/
+    align-items: center;/*垂直置中，使步驟高度一致*/
+    margin: 20px 0;/*上下間距為 20px，左右無間距*/
+}
+
+.step {
+    padding: 10px;
+    background: #ccc;
+    border-radius: 5px;
+}
+
+.step.active {/*進行中是淡綠色，用來區分當前步驟與其他步驟*/
+    background: #ccd5ae;
+}
+
+.arrow {
+    padding: 0 10px;/*左右各留 10px 空隙，保持箭頭與步驟之間的距離*/
+    font-size: 24px;/*把箭頭字體放大*/
+}
+
+.button-group {
+    display: flex;/*將按鈕橫向排列*/
+    justify-content: center;/*水平置中按鈕*/
+    gap: 10px;/*按鈕之間間距 10px*/
+    margin-top: 20px;/*按鈕與上方元素保持 20px 距離*/
+}
+
+.btn-next {
+    display: block;/* 讓按鈕成為塊，佔滿整行*/
+    margin: 20px auto;/*自動水平置中並與上下保持 20px 間距*/
+    padding: 10px 20px;/*調整內邊距，讓按鈕更大且易於點擊*/
+    background-color: #ccd5ae;/*按鈕背景顏色*/
+    color: black;/*字的顏色*/
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;/*滑鼠懸停時顯示，表示可點擊*/
+}
+h1 {
+    text-align: left; /* Align text to the left */
+    display: inline-block; /* Ensure the underline matches the text length */
+    border-bottom: 2px solid black; /* Add underline */
+    padding-bottom: 5px; /* Add some space between the text and underline */
+    margin-left: 130px; /* Move the heading away from the left edge */
+}
+
+.order-details p {
+    margin-left: 130px; /* Move text to the right */
+    font-size: 16px; /* Optional: Adjust font size */
+    line-height: 1.6; /* Optional: Adjust line spacing for better readability */
+}
+
+table {
+    margin: 20px auto;/*表格置中，並與上下元素保持 20px 間距*/
+    width: 80%;/*表格寬度佔容器的 80%*/
+    border-collapse: collapse;/*邊框合併為單一邊框*/
+}
+
+table th, table td {
+    border: 2px solid white;
+    padding: 10px;
+    text-align: center;
+}
+.image-container {
+    display: flex;/*使用 Flexbox 讓圖片在容器內置中*/
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    height: 150px; /* 可根據需要調整 */
+    overflow: hidden; /* 如果圖片超出容器，隱藏多餘部分 */
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* 確保圖片適應容器且不變形 */
+}
+
+.cart-summary {
+    width: 80%;
+    margin: 20px auto;
+    text-align: right;
+}
+#checkout-section table {
+    margin: 0 auto;
+    width: 50%;
+}
+#order-summary th, #order-summary td {
+    border: 2px solid white;
+    padding: 10px;
+    text-align: center;
+}
+
+input:focus {
+    border: 2px solid green;/*點擊輸入框出現的特效，可以改顏色*/
+    outline: none;/*移除默認藍色外框*/
+    transition: border 0.3s;/*邊框顏色在 0.3 秒內變化*/
+}
+
+button:hover {
+    transform: scale(1.05);/*滑鼠停留時，按鈕會放大5%，並變淡綠色*/
+    background-color: #9fd56d;
+    color:white;
+    transition: transform 0.1s, background-color 0.3s;/*用transition 控制*/
+}/*滑鼠移到按鈕上時，顏色變化或輕微放大的效果。*/
+
+@media (max-width: 768px) {
+    input, select {
+        width: 100%;
+    }
+    button {
+        width: 100%;
+    }
+}/*讓表單在不同設備上看起來都不擁擠。*/
+
+footer{
+    text-align: center;
+    color: white;
+    padding: 10px;
+    background-color: #d3b495;
+}

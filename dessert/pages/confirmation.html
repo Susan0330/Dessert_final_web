@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>送出訂單</title>
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/CSS/styles.css">
+    <link rel="stylesheet" href="../assets/CSS/top.css">
+    <script src="../assets/JS/top.js"></script>
+</head>
+
+<body>
+    <!-- 回到頂部按鈕 -->
+    <a id="scroll-up" class="scroll-up" href="#">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0h24v24H0z" fill="none"></path>
+        <path fill="rgba(255,255,255,1)" d="M11.9997 10.8284L7.04996 15.7782L5.63574 14.364L11.9997 8L18.3637 14.364L16.9495 15.7782L11.9997 10.8284Z"></path>
+    </svg>
+    </a>
+    <!-- 動態優惠 -->
+    <div class="promo-banner">
+      <p>✨\ 新品上市，購買任意甜品就送飲品！ /【活動時間】即日起至 2025/01/31✨</p>
+    </div>
+  
+  
+      <!-- Navbar -->
+      <nav class="navbar">
+        <a href="index.html" class="logo-link">
+            <img src="../assets/images/jump.png" class="index">
+            <img src="../assets/images/logo1.png" class="index2">
+        </a>
+        <ul class="nav-links">
+            <li><a href="us.html">關於我們</a></li>
+            <li><a href="Allproducts.html">所有商品</a></li>
+            <li><a href="information.html">會員資料</a></li>
+        </ul>
+        <div class="navbar-actions">
+            <div class="search-container">
+                <input type="text" placeholder="搜尋..." class="search-input">
+                <a href="" class="search-icon-link"><img src="../assets/images/icon/serach.png" class="search-icon"></a>
+            </div>
+            <div class="nav-icons">
+                <a href="cart.html"><img src="../assets/images/icon/car.png" class="icon"></a>
+                <a href="login.html"><img src="../assets/images/icon/person.png" class="icon"></a>
+            </div>
+        </div>
+    </nav>
+    <!--購物車-->
+    <main>
+        <div class="steps">
+            <span class="step">1. 購物車</span>
+            <span class="arrow">→</span>
+            <span class="step">2. 填寫資料</span>
+            <span class="arrow">→</span>
+            <span class="step active">3. 送出訂單</span>
+        </div>
+        <section>
+            <h1>訂單確認</h1>
+            <h3 style="text-align: center;">訂單已送出，請留意 E-mail 或手機簡訊通知</h3><!--置中對齊-->
+            <table id="order-summary" style="background-color: #e9edc9;">
+                <thead>
+                    <tr>
+                        <th>商品圖片</th>
+                        <th>商品名稱</th>
+                        <th>數量</th>
+                        <th>總價</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 動態填充商品內容 根據購物車的內容動態生成-->
+                </tbody>
+                <tfoot>
+                    <!-- 動態填充小計、運費和合計 JS顯示總結-->
+                </tfoot>
+            </table>
+            <div class="order-details"><!--用來顯示顧客資訊的容器-->
+                <p>顧客名稱：<span id="customer-name"></span></p><!--JavaScript 自動填充顧客在表單中輸入的資料-->
+                <p>電子信箱：<span id="customer-email"></span></p>
+                <p>電話號碼：<span id="customer-phone"></span></p>
+                <p>收件地址：<span id="recipient-address"></span></p>
+                <p>付款方式：<span id="payment-method"></span></p>
+            </div>
+            <div class="button-group"><!--按鈕群組容器，對應兩個操作按鈕-->
+                <button class="btn-next" onclick="alert('感謝您的訂購'); location.href='index.html'">送出訂單</button><!--onclick="alert('感謝您的訂購')"：點擊按鈕後，彈出感謝訊息-->
+                <button class="btn-next" onclick="location.href='Allproducts.html'">繼續購物</button><!--跳轉到頁面-->
+            </div>
+        </section>        
+    </main>
+    <script src="../assets/JS/script.js"></script>
+
+    <footer>
+        <p>Copyright © 滋館</p>
+    </footer> 
+</body>
+</html>

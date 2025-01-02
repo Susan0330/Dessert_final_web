@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>巧克力巴斯克</title>
+    <link rel="shortcut icon" href="../../../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../../../assets/CSS/product.css">
+    <link rel="stylesheet" href="../../../assets/CSS/top.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../../../assets/JS/product.js"></script>
+    <script src="../../../assets/JS/top.js"></script>
+</head>
+<body>
+    <!-- 回到頂部按鈕 -->
+    <a id="scroll-up" class="scroll-up" href="#">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="none"></path>
+      <path fill="rgba(255,255,255,1)" d="M11.9997 10.8284L7.04996 15.7782L5.63574 14.364L11.9997 8L18.3637 14.364L16.9495 15.7782L11.9997 10.8284Z"></path>
+      </svg>  
+    </a>
+
+    <!-- 動態優惠 -->
+    <div class="promo-banner">
+      <p>✨\ 新品上市，購買任意甜品就送飲品！ /【活動時間】即日起至 2025/01/31✨</p>
+    </div>
+  
+  
+      <!-- Navbar -->
+      <nav class="navbar">
+        <a href="../../index.html" class="logo-link">
+            <img src="../../../assets/images/jump.png" class="index">
+            <img src="../../../assets/images/logo1.png" class="index2">
+        </a>
+        <ul class="nav-links">
+            <li><a href="../../us.html">關於我們</a></li>
+            <li><a href="../../Allproducts.html">所有商品</a></li>
+            <li><a href="../../information.html">會員資料</a></li>
+        </ul>
+        <div class="navbar-actions">
+            <div class="search-container">
+                <input type="text" placeholder="搜尋..." class="search-input">
+                <a href="" class="search-icon-link"><img src="../../../assets/images/icon/serach.png" class="search-icon"></a>
+            </div>
+            <div class="nav-icons">
+                <a href="../../cart.html"><img src="../../../assets/images/icon/car.png" class="icon"></a>
+                <a href="../../login.html"><img src="../../../assets/images/icon/person.png" class="icon"></a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="product-page">
+    
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb">
+          <a href="../../index.html">首頁</a> &gt; 
+          <a href="../../Allproducts.html">所有商品</a> &gt; 
+          <a href="../../secfile.html">蛋糕</a> &gt; 
+          <span>巧克力巴斯克</span>
+        </nav>
+    
+        <main>
+          <!-- Product Details -->
+          <div class="product-details">
+            <!-- 商品圖片區 -->
+            <div class="product-image">
+              <img src="../../../assets/images/cake/chocolate.png" alt="商品圖片" />
+              <div class="decorative-image">
+                <img src="../../../assets/images/rabbit/ra2.png" alt="小圖片" />
+              </div>
+            </div>
+          
+
+            <!-- 商品資訊 -->
+            <div class="product-info">
+              <h1>巧克力巴斯克</h1>
+              <hr width="75%" align="left">
+              <p>濃郁可可與乳酪完美融合，入口即化的口感，帶有一絲微苦回甘，是巧克力愛好者的最愛。</p>
+              <h2>$<span id="price">150</span></h2>
+
+              <div class="quantity-controls">
+                <button id="decrease">-</button>
+                <input id="quantity" type="number" value="1" min="1">
+                <button id="increase">+</button>
+              </div>
+              <button class="add-to-cart learn-more">加入購物車</button>
+            </div>
+          </div>
+          
+    
+          <!-- Product Description and Reviews -->
+          <div class="product-section">
+            <!-- 商品成分區塊 -->
+            <div class="product-card product-description">
+                <h3>商品成分</h3>
+                <p>奶油乳酪、玉米澱粉、細砂糖、奶油、雞蛋、巧克力</p>
+                <hr color="#000000" width="95%" align="left" size="1px">
+                <h3>保存期限</h3>
+                <p>冷藏保存3日</p>
+                <hr color="#000000" width="95%" align="left" size="1px">
+                <h3>注意事項</h3>
+                <p>• 提供全區域宅配服務，部分偏遠地區可能需額外收取運費。</p>
+                <p>• 寄送時間為週一至週六，每日9:00至18:00，無法指定精確時段。</p>
+                <p>• 蛋糕採用專業保冷包裝，確保在運送過程中保持最佳品質。</p>
+                <p>• 享用前建議提前10-15分鐘從冰箱取出回溫，以提升口感。</p>
+                <hr style="border:2px dashed black" size="1" width="80%" align="left">
+                <h2>重要!!</h2>
+                <p>• 蛋糕為生鮮食品，售出後恕不接受退換貨。</p>
+                <p>• 若收到商品有任何問題，請於24小時內聯繫客服處理。</p>
+            </div>
+        
+            <!-- 評論區塊 -->
+            <div class="product-card product-reviews">
+                <!-- 撰寫評論區塊 -->
+                <div class="review-system">
+                    <h3>撰寫評論</h3>
+                    <hr>
+                    <div class="rating">
+                      <input type="radio" id="star1" name="rating" value="1">
+                      <label for="star1" title="1 stars">&#9733;</label>
+                      
+                      <input type="radio" id="star2" name="rating" value="2">
+                      <label for="star2" title="2 stars">&#9733;</label>
+                    
+                      <input type="radio" id="star3" name="rating" value="3">
+                      <label for="star3" title="3 stars">&#9733;</label>
+                    
+                      <input type="radio" id="star4" name="rating" value="4">
+                      <label for="star4" title="4 stars">&#9733;</label>
+                    
+                      <input type="radio" id="star5" name="rating" value="5">
+                      <label for="star5" title="5 star">&#9733;</label>
+                    </div>
+
+                    <textarea id="review-text" placeholder="請輸入您的評論..." rows="4"></textarea>
+                    <button id="submit-review">提交評論</button>
+                    <p id="rating-feedback" style="margin-top: 10px; font-size: 14px; color: #555;"></p>
+                </div>
+                <!-- 商品評論區塊 -->
+                <h3>商品評論</h3>
+                <hr color="#000000" width="95%" align="left" size="1px">
+                <div class="review">
+                  <div class="review-content">
+                      <!-- 用戶圖片 -->
+                      <img src="../../../assets/images/customer/customer2.jpg" alt="用戶圖片" class="user-image">
+                      <!-- 評論內容 -->
+                      <div class="review-text">
+                          <p><strong>用戶名稱</strong>: 嗚啦</p>
+                          <p>⭐⭐⭐⭐⭐</p>
+                          <p>評語: 巧克力濃郁得剛剛好，不會過甜，巧克力愛好者不能錯過！</p>
+                      </div>
+                  </div>
+              </div>
+              
+            </div>
+        </div>
+        
+    
+          <!-- Related Products -->
+          <div class="related-products">
+            <h2>其他人也看過</h2>
+            <div class="carousel-container">
+              <button class="arrow left-arrow" id="prev">
+                <span>&#10094;</span>
+              </button>
+              <div class="carousel-wrapper">
+                <div class="carousel" id="carousel">
+
+                  <a href="pumpkin cake.html">
+                    <div class="item">
+                      <div class="item-image">
+                        <img src="../../../assets/images/cake/pumpkin.png" alt="">
+                      </div>
+                      <div class="item-name">南瓜巴斯克</div>
+                      <div class="item-price">$150</div>
+                    </div>
+                  </a>
+
+                  <a href="../cookie/butter.html">
+                    <div class="item">
+                      <div class="item-image">
+                        <img src="../../../assets/images/cookie/butter.jpg" alt="">
+                      </div>
+                      <div class="item-name">純香奶油曲奇</div>
+                      <div class="item-price">$80</div>
+                    </div>
+                  </a>
+
+                  <a href="../drink/latté.html">
+                    <div class="item">
+                      <div class="item-image">
+                        <img src="../../../assets/images/drinks/latté.jpg" alt="">
+                      </div>
+                      <div class="item-name">拿鐵latté</div>
+                      <div class="item-price">$60</div>
+                    </div>
+                  </a>
+
+                  <a href="../muffin/honey.html">
+                    <div class="item">
+                      <div class="item-image">
+                        <img src="../../../assets/images/muffins/honey.png" alt="">
+                      </div>
+                      <div class="item-name">蜂蜜糖霜鬆餅</div>
+                      <div class="item-price">$160</div>
+                    </div>
+                  </a>
+
+                  <a href="../drink/lemongreentea.html">
+                    <div class="item">
+                      <div class="item-image">
+                        <img src="../../../assets/images/drinks/lemongreentea.jpg" alt="">
+                      </div>
+                      <div class="item-name">手打檸檬綠茶</div>
+                      <div class="item-price">$35</div>
+                    </div>
+                  </a>
+
+                  <a href="blacktea cake.html">
+                    <div class="item">
+                      <div class="item-image">
+                        <img src="../../../assets/images/cake/black tea.png" alt="">
+                      </div>
+                      <div class="item-name">紅茶巴斯克</div>
+                      <div class="item-price">$150</div>
+                    </div>
+                  </a>
+
+                </div>
+              </div>
+
+              <button class="arrow right-arrow" id="next">
+                <span>&#10095;</span>
+              </button>
+            </div>
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+          </div>
+          
+        </main>
+      </div>
+      <!-- footer --> 
+      <footer>
+        <p>Copyright © 滋館</p>
+      </footer> 
+</body>
+</html>

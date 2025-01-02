@@ -1,0 +1,699 @@
+/* 設置頁面的背景顏色與字體樣式 */
+body {
+    background-color: #FEFAE0; /* 背景顏色 */
+    font-family: Arial, sans-serif; /* 頁面使用 Arial 字體 */
+    margin: 0; /* 移除頁面邊距 */
+    padding: 0; /* 移除頁面內距 */
+}
+
+nav {
+    color: #534d3e;
+}
+
+/*　動態優惠　*/
+/* 滾動文字區塊 */
+.promo-banner {
+    background-color: #FEFAE0; 
+    color: #D5A06C; 
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* 確保廣告在最上層 */
+    overflow: hidden; 
+}
+
+/* 滾動文字動畫效果 */
+.promo-banner p {
+    white-space: nowrap; 
+    animation: scroll-text 10s linear infinite; 
+}
+
+/* 動畫效果：從右到左滾動 */
+@keyframes scroll-text {
+    0% {
+        transform: translateX(100%); /* 起始位置：從右側開始 */
+    }
+    100% {
+        transform: translateX(-100%); /* 結束位置：移到左側外面 */
+    }
+}
+
+/* Navbar樣式調整 (確保不被廣告遮擋) */
+.navbar {
+    margin-top: 50px; /* 讓導航欄距離廣告有間距 */
+    background-color: #fff;
+}
+
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d3b495;
+    padding: 10px 30px; /* 減少內邊距以留出更多高度 */
+    position: sticky;
+    z-index: 10;
+    height: 140px; /* 增加 navbar 的高度，確保 logo 有足夠的空間 */
+    box-sizing: border-box; /* 確保 padding 被計入高度內 */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* 添加過渡效果 */
+}
+
+.site-title {
+    margin-left: 10px; /* 圖片和文字的間距 */
+    font-size: 28px; /* 字體大小 */
+    font-weight: bold; /* 字體粗細 */
+    color: #333; /* 字體顏色 */
+    font-family: Arial, Helvetica, sans-serif;/* 字體樣式 */
+    display: inline-block; /* 讓文字和圖片在同一行 */
+}
+
+.navbar.navbar-transparent {
+    background-color: rgba(204, 213, 174, 0.7); /* 透明效果 */
+    box-shadow: none; /* 去掉阴影 */
+}
+
+.logo-link {
+    display: block;
+    margin-left: 95px; /* 調整圖片與選單之間的距離 */
+    display: flex; /* 使用 Flexbox 排列 */
+    align-items: center; /* 垂直對齊圖片 */
+    gap: 10px; /* 圖片之間的間距 */
+}
+
+.index {
+    max-width: none;
+    width: 85px;
+    height: auto;
+    margin-top: 20px; /* 根據需要調整這個數值 */
+}
+
+.index2 {
+    max-width: none;
+    width: 100px;
+    height: auto;
+    margin-top: 20px; /* 根據需要調整這個數值 */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* 選單置中 */
+    flex-grow: 1;
+}
+
+.nav-links li {
+    margin: 0 15px; /* 選單項目間距 */
+    text-align: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.nav-links a:hover {
+    color: white;
+    background-color: #988571;
+}
+
+/* 搜尋框與圖標區域 */
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* 圖標間距 */
+}
+
+.search-container {
+    position: relative; /* 建立定位上下文 */
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px; /* 搜尋框寬度 */
+    height: 30px; /* 搜尋框高度 */
+    padding-right: 30px; /* 預留空間給圖標 */
+    box-sizing: border-box; /* 包含內邊距和邊框 */
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px; /* 放大鏡圖標的水平位置 */
+    width: 18px; /* 放大鏡圖標大小 */
+    height: 18px;
+    pointer-events: none; 
+    top: 50%; 
+    transform: translateY(-50%); /* icon向上移動一點 */
+}
+
+.nav-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icon-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.icon {
+    width: 30px; 
+    height: 30px; 
+}
+
+/* 商品頁面的主要容器樣式 */
+.product-page {
+    padding: 20px; /* 添加內距，讓內容與邊框保持距離 */
+}
+
+/* 麵包屑導航的樣式 */
+.breadcrumb {
+    margin: 10px 0; /* 上下距離設置 */
+}
+
+/* 麵包屑導航中的連結樣式 */
+.breadcrumb a {
+    text-decoration: none; /* 去掉超連結的下劃線 */
+    color: #a5784c; /* 設置連結的文字顏色 */
+}
+
+/* 麵包屑中的靜態文字樣式 */
+.breadcrumb span {
+    color: gray; /* 設置靜態文字為灰色 */
+}
+
+/* 商品詳情的主要區塊樣式 */
+.product-details {
+    display: flex; /* 使用 Flexbox 將內容橫向排列 */
+    justify-content: space-between; /* 左右對齊 */
+    margin: 20px 0; /* 上下外距設置 */
+    gap: 30px; /* 左右區塊的間距 */
+}
+
+/* 商品圖片的樣式 */
+.product-image {
+    width: 35%; /* 占容器的 35% 寬度 */
+    height: auto; /* 高度根據寬度自動調整 */
+    display: flex; /* 使用 Flexbox 將圖片置中 */
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    overflow: visible; /* 確保圖片不會被裁剪 */
+    border-radius: 20px; /* 圖片容器圓角效果 */
+    position: relative; /* 為裝飾圖片的絕對定位提供參考 */
+    margin: 0 auto; /* 將整個圖片容器居中 */
+}
+
+/* 主圖片樣式 */
+.product-image img {
+    width: 100%; /* 圖片寬度填滿容器 */
+    height: auto; /* 保持圖片比例 */
+    object-fit: cover; /* 圖片適應容器大小 */
+    border-radius: 20px; /* 圖片圓角效果 */
+}
+
+/* 裝飾圖片樣式 */
+.decorative-image {
+    position: absolute; /* 絕對定位在主圖片上 */
+    bottom: -20px; /* 距主圖片底部的距離 */
+    right: -80px; /* 水平距離 */
+    width: 120px; /* 小圖片寬度設置 */
+    height: auto; /* 保持比例 */
+    z-index: 2; /* 確保裝飾圖片位於主圖片之上 */
+    transform: rotate(-10deg); /* 將圖片旋轉一點角度 */
+}
+
+  
+/* 商品資訊區塊樣式 */
+.product-info {
+    width: 45%; /* 占容器的 45% 寬度 */
+    gap: 20px; /* 子元素之間的間距 */
+}
+
+/* 商品名稱樣式 */
+.product-info h1 {
+    font-size: 42px; /* 放大字體 */
+    font-weight: bold; /* 字體加粗 */
+    line-height: 1.2; /* 調整行距，讓文字更緊湊 */
+}
+
+/* 商品描述文字樣式 */
+.product-info p {
+    max-width: 70%; /* 限制段落的最大寬度 */
+    line-height: 1.8; /* 增加行間距 */
+    margin-bottom: 20px; /* 與下方元素保持距離 */
+}
+
+/* 分隔線樣式 */
+.product-info hr {
+    margin: 10px 0; /* 增加上下距離 */
+}
+
+/* 數量控制區域樣式 */
+.quantity-controls {
+    display: flex; /* 使用 Flexbox 排列 */
+    align-items: center; /* 元素垂直對齊 */
+}
+  
+/* 數量控制按鈕樣式 */
+.quantity-controls button {
+    width: 30px; /* 按鈕寬度 */
+    height: 30px; /* 按鈕高度 */
+    font-size: 20px; /* 字體大小 */
+}
+
+/* 數量輸入框樣式 */
+.quantity-controls input {
+    width: 50px; /* 輸入框寬度 */
+    text-align: center; /* 文字居中 */
+    font-size: 16px; /* 字體大小 */
+    border: 1px solid #ccc; /* 灰色邊框 */
+    border-radius: 4px; /* 邊框圓角 */
+    margin: 0 10px; /* 與按鈕的水平距離 */
+}
+
+/* 禁用輸入框的預設數字調整按鈕 */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none; /* 禁用樣式 */
+    margin: 0; /* 移除多餘間距 */
+}
+
+/* 為其他瀏覽器禁用數字調整按鈕 */
+input[type="number"] {
+    -moz-appearance: textfield; /* Firefox 禁用樣式 */
+    -webkit-appearance: none; /* Chrome/Safari 禁用樣式 */
+    appearance: none; /* 標準屬性 */
+}
+  
+/* 數量輸入框 ID 的樣式 */
+#quantity {
+    margin: 0 10px; /* 水平間距 */
+}
+  
+
+/* 加入購物車按鈕樣式 */
+.add-to-cart {
+    margin-top: 10px; /* 與上方元素的距離 */
+    padding: 10px 20px; /* 內距設置 */
+    cursor: pointer; /* 設置鼠標為指針樣式 */
+    width: 70%; /* 按鈕寬度為父容器的 70% */
+    text-align: center; /* 文字置中 */
+    font-size: 16px; /* 字體大小 */
+    font-weight: bold; /* 字體加粗 */
+    display: block; /* 設置為區塊級元素 */
+    background-color: #E9EDC9; /* 背景色 */
+    border: 2px solid #ccd6dd; /* 邊框樣式 */
+    border-radius: 0.75em; /* 邊框圓角 */
+}
+
+/* 基本按鈕樣式 */
+button {
+    position: relative; /* 為了支持偽元素的絕對定位 */
+    display: inline-block; /* 按鈕作為行內塊元素顯示 */
+    cursor: pointer; /* 鼠標懸停時顯示指針 */
+    outline: none; /* 移除按鈕的默認聚焦邊框 */
+    border: 0; /* 移除默認邊框 */
+    vertical-align: middle; /* 垂直對齊至中間 */
+    text-decoration: none; /* 移除默認下劃線 */
+    font-family: inherit; /* 繼承父容器的字體樣式 */
+    font-size: 15px; /* 設定按鈕的文字大小 */
+}
+  
+/* 特定的 Learn More 按鈕樣式 */
+button.learn-more {
+    font-weight: 600; /* 字體加粗 */
+    color: black; /* 按鈕文字顏色 */
+    text-transform: uppercase; /* 將文字轉換為大寫 */
+    padding: 1.25em 2em; /* 上下內距為 1.25em，左右為 2em */
+    background: #E9EDC9; /* 按鈕背景顏色 */
+    border: 2px solid #ccd6dd; /* 灰色的外邊框 */
+    border-radius: 0.75em; /* 圓角邊框，讓按鈕更柔和 */
+    -webkit-transform-style: preserve-3d; /* 保留 3D 效果 (Safari 瀏覽器) */
+    transform-style: preserve-3d; /* 保留 3D 效果 */
+    -webkit-transition: background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1); /* 背景與變形的平滑過渡 (Safari 瀏覽器) */
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1); /* 背景與變形的平滑過渡 */
+}
+
+button.learn-more::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #e9ebee;
+    border-radius: inherit;
+    -webkit-box-shadow: 0 0 0 2px #ccd6dd, 0 0.625em 0 0 #FAEDCD;
+    box-shadow: 0 0 0 2px #ccd6dd, 0 0.625em 0 0 #FAEDCD;
+    -webkit-transform: translate3d(0, 0.75em, -1em);
+    transform: translate3d(0, 0.75em, -1em);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+/* 當按鈕懸停時的樣式 */
+button.learn-more:hover {
+    background: #CCD5AE; /* 改變背景顏色 */
+    -webkit-transform: translate(0, 0.25em); /* 向下位移 0.25em (Safari 瀏覽器) */
+    transform: translate(0, 0.25em); /* 向下位移 0.25em */
+}
+  
+/* 當按鈕懸停時偽元素的樣式 */
+button.learn-more:hover::before {
+    -webkit-box-shadow: 0 0 0 2px #ccd6dd, 0 0.5em 0 0 #FAEDCD; /* 改變陰影距離 (Safari 瀏覽器) */
+    box-shadow: 0 0 0 2px #ccd6dd, 0 0.5em 0 0 #FAEDCD; /* 改變陰影距離 */
+    -webkit-transform: translate3d(0, 0.5em, -1em); /* 偽元素 3D 位移更短 (Safari 瀏覽器) */
+    transform: translate3d(0, 0.5em, -1em); /* 偽元素 3D 位移更短 */
+}
+  
+/* 當按鈕被按下時的樣式 */
+button.learn-more:active {
+    background: #CCD5AE; /* 改變背景顏色 */
+    -webkit-transform: translate(0em, 0.75em); /* 向下位移更長 (Safari 瀏覽器) */
+    transform: translate(0em, 0.75em); /* 向下位移更長 */
+}
+  
+/* 當按鈕被按下時偽元素的樣式 */
+button.learn-more:active::before {
+    -webkit-box-shadow: 0 0 0 2px #ccd6dd, 0 0 #FAEDCD; /* 偽元素的陰影縮小到按鈕內 (Safari 瀏覽器) */
+    box-shadow: 0 0 0 2px #ccd6dd, 0 0 #FAEDCD; /* 偽元素的陰影縮小到按鈕內 */
+    -webkit-transform: translate3d(0, 0, -1em); /* 偽元素完全平移到按鈕底部 (Safari 瀏覽器) */
+    transform: translate3d(0, 0, -1em); /* 偽元素完全平移到按鈕底部 */
+}
+  
+/* 商品描述與評論區域的樣式 */
+.product-description,
+.product-reviews {
+    width: 45%; /* 每個區域占容器的 45% */
+}
+  
+/* 相關商品區塊樣式 */
+.related-products {
+    margin: 40px 0; /* 上下外距 */
+    text-align: center; /* 文字居中對齊 */
+}
+  
+/* 相關商品區塊的標題樣式 */
+.related-products h2 {
+    font-size: 32px; /* 標題字體大小 */
+    margin-bottom: 20px; /* 與下方內容的距離 */
+}
+
+/* 輪播圖容器樣式 */
+.carousel-container {
+    display: flex; /* 使用 Flexbox */
+    align-items: center; /* 垂直方向居中 */
+    justify-content: center; /* 水平方向居中 */
+    position: relative; /* 相對定位，支持內部子元素的絕對定位 */
+    width: 100%; /* 滿寬度顯示 */
+}
+  
+/* 輪播圖內部顯示區域樣式 */
+.carousel-wrapper {
+    overflow: hidden; /* 隱藏超出容器的內容 */
+    width: 80%; /* 輪播顯示區域寬度 */
+}
+
+/* 輪播項目容器樣式 */
+.carousel {
+    display: flex; /* 使用 Flexbox 橫向排列 */
+    transition: transform 0.5s ease-in-out; /* 增加滑動動畫 */
+}
+  
+/* 商品項目容器樣式 */
+.item {
+    width: 300px; /* 每個商品卡片的固定寬度 */
+    flex-shrink: 0; /* 防止商品因空間不足而縮小 */
+    text-align: center; /* 文字內容居中對齊 */
+    margin: 0 15px; /* 左右間距為 15px，上下為 0 */
+    background: #f9f9f9; /* 卡片背景顏色為淺灰色 */
+    border-radius: 10px; /* 卡片的圓角效果 */
+    padding: 20px; /* 卡片內容與邊框的內距為 20px */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加陰影，提升卡片的浮動效果 */
+    transition: transform 0.3s ease-in-out; /* 在滑動時添加平滑的動畫效果 */
+}
+  
+/* 商品圖片容器樣式 */
+.item-image {
+    height: 200px; /* 圖片容器的固定高度 */
+    background: none; /* 移除背景色，讓圖片更突出 */
+    border-radius: 10px; /* 圓角效果，與卡片一致 */
+    display: flex; /* 使用 Flexbox 使圖片在容器中居中對齊 */
+    align-items: center; /* 垂直方向居中對齊 */
+    justify-content: center; /* 水平方向居中對齊 */
+    overflow: hidden; /* 防止圖片溢出容器的範圍 */
+}
+
+/* 商品圖片樣式 */
+.item-image img {
+    width: 100%; /* 圖片寬度填滿容器 */
+    height: 100%; /* 圖片高度填滿容器 */
+    object-fit: cover; /* 保持圖片比例，裁剪多餘部分 */
+    border-radius: 10px; /* 圓角效果，與容器一致 */
+}
+
+/* 商品名稱樣式 */
+.item-name {
+    font-weight: bold; /* 商品名稱字體加粗 */
+    margin: 10px 0; /* 上下間距為 10px */
+    font-size: 18px; /* 字體大小設定為 18px */
+}
+
+/* 商品價格樣式 */
+.item-price {
+    color: #333; /* 文字顏色為深灰色 */
+    font-size: 16px; /* 字體大小設定為 16px */
+}
+
+/* 輪播箭頭按鈕樣式 */
+.arrow {
+    background: none; /* 移除背景色 */
+    border: none; /* 移除邊框 */
+    position: absolute; /* 絕對定位，用於定位箭頭 */
+    top: 50%; /* 垂直方向置中 */
+    transform: translateY(-50%); /* 修正箭頭的垂直偏移 */
+    cursor: pointer; /* 鼠標懸停時顯示為指針 */
+    font-size: 36px; /* 箭頭圖標的字體大小 */
+    font-weight: bold; /* 加粗箭頭圖標 */
+    color: #555; /* 箭頭顏色為中灰色 */
+    transition: color 0.3s ease, transform 0.3s ease; /* 添加平滑過渡效果 */
+    z-index: 10; /* 確保箭頭顯示在內容上方 */
+}
+  
+/* 箭頭的內部圖標樣式 */
+.arrow span {
+    display: inline-block; /* 使箭頭內的文字或圖標保持塊狀排列 */
+    transform: rotate(0deg); /* 預設無旋轉效果 */
+}
+
+/* 當箭頭按鈕懸停時的樣式 */
+.arrow:hover {
+    color: #000; /* 改變箭頭顏色為黑色 */
+    transform: scale(1.2); /* 動態放大箭頭按鈕 */
+}
+
+/* 左箭頭的特定樣式 */
+.left-arrow {
+    left: 10px; /* 設置箭頭距離容器左邊框 10px */
+}
+  
+/* 右箭頭的特定樣式 */
+.right-arrow {
+    right: 10px; /* 設置箭頭距離容器右邊框 10px */
+}
+
+/* 進度條容器樣式 */
+.progress-bar {
+    width: 80%; /* 進度條寬度為容器的 80% */
+    height: 5px; /* 進度條高度固定為 5px */
+    background: #ddd; /* 進度條背景為淺灰色 */
+    margin: 20px auto 0; /* 設置上下外距，上方為 20px，居中對齊 */
+    border-radius: 5px; /* 進度條的圓角效果 */
+    position: relative; /* 相對定位，用於定位內部進度條 */
+}
+  
+/* 進度條的動態部分樣式 */
+.progress {
+    width: 0%; /* 預設寬度為 0，根據進度動態變化 */
+    height: 100%; /* 與父容器高度一致 */
+    background: #555; /* 進度條顏色為深灰色 */
+    border-radius: 5px; /* 圓角效果與容器一致 */
+    transition: width 0.3s ease-in-out; /* 寬度變化時的平滑動畫 */
+}
+
+/* 當商品卡片被懸停時添加動畫效果 */
+.item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 平滑的放大和陰影過渡 */
+}
+
+/* 當商品卡片被懸停時的樣式 */
+.item:hover {
+    transform: scale(1.05); /* 商品卡片放大 5% */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* 添加更明顯的陰影效果 */
+}
+
+/* 輪播圖內的連結樣式 */
+.carousel a {
+    text-decoration: none; /* 去掉超連結的下劃線 */
+    color: inherit; /* 繼承父容器的文字顏色 */
+}
+
+
+/* 商品分區的主要樣式 */
+.product-section {
+    display: flex; /* 使用 Flexbox，讓內容橫向排列 */
+    justify-content: space-between; /* 左右內容對齊到兩端 */
+    gap: 20px; /* 左右內容之間的間距 */
+    margin: 20px auto; /* 上下外距為 20px，居中對齊 */
+}
+
+/* 商品卡片樣式 */
+.product-card {
+    flex: 1; /* 左右分區各佔容器的 50% */
+    max-width: 48%; /* 卡片最大寬度為容器的 48% */
+    border: 1px solid #ddd; /* 灰色的邊框 */
+    border-radius: 5px; /* 圓角邊框效果 */
+    padding: 20px; /* 卡片內部內容與邊框的距離 */
+    background: #CCD5AE; /* 卡片背景顏色 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 卡片的陰影效果 */
+}
+
+/* 商品評論的主要容器樣式 */
+.product-reviews {
+    display: flex; /* 使用 Flexbox 排列評論區域 */
+    flex-direction: column; /* 評論內容垂直排列 */
+    gap: 10px; /* 撰寫評論與商品評論之間的距離 */
+}
+
+/* 評論系統和評論區域的基礎樣式 */
+.review-system,
+.review {
+    width: 100%; /* 占滿父容器的寬度 */
+    box-sizing: border-box; /* 將 padding 和 border 計算在寬度內，避免內容超出容器 */
+}
+
+/* 評論系統容器的樣式 */
+.review-system {
+    padding: 20px; /* 內距，讓內容與容器邊緣保持距離 */
+    background-color: #FEFAE0; /* 背景顏色為米黃色 */
+    border-radius: 5px; /* 圓角效果 */
+    text-align: left; /* 文字內容靠左對齊 */
+}
+
+/* 評論文字輸入框樣式 */
+textarea#review-text {
+    width: 66%; /* 寬度占容器的 66% */
+    max-width: 100%; /* 最大寬度不能超過父容器 */
+    padding: 10px; /* 內距讓內容不緊貼邊緣 */
+    border: 1px solid #ccc; /* 灰色邊框 */
+    border-radius: 5px; /* 輸入框的圓角效果 */
+    resize: none; /* 禁止用戶調整輸入框大小 */
+    margin-bottom: 10px; /* 與下方按鈕保持距離 */
+}
+
+/* 提交按鈕樣式 */
+button#submit-review {
+    width: 100%; /* 寬度填滿父容器 */
+    padding: 10px; /* 內距設定，讓按鈕內容不緊貼邊緣 */
+    background-color: #E9EDC9; /* 按鈕的背景顏色 */
+    border: 2px solid #ccd6dd; /* 灰色邊框 */
+    border-radius: 5px; /* 圓角邊框效果 */
+    font-size: 16px; /* 字體大小 */
+    cursor: pointer; /* 鼠標懸停時顯示為指針樣式 */
+}
+
+/* 評分星星區域的樣式 */
+.rating {
+    display: flex; /* 使用 Flexbox，讓星星橫向排列 */
+    justify-content: left; /* 星星靠左排列 */
+    margin-bottom: 10px; /* 與下方內容保持距離 */
+    flex-direction: row-reverse; /* 星星從右向左排列 */
+}
+
+/* 評分星星輸入框隱藏 */
+.rating input {
+    display: none; /* 隱藏輸入框 */
+}
+
+/* 星星標籤樣式 */
+.rating label {
+    font-size: 50px; /* 星星的大小 */
+    color: #000; /* 星星的預設顏色為黑色 */
+    cursor: pointer; /* 鼠標懸停時顯示為指針樣式 */
+    transition: color 0.2s; /* 星星顏色變化時的平滑過渡效果 */
+}
+
+/* 當星星被選中時的樣式 */
+.rating input:checked {
+    color: #ffcc00; /* 當星星被選中時，設為金黃色 */
+}
+
+/* 當星星被選中及其左側的星星樣式 */
+.rating input:checked + label,
+.rating input:checked + label ~ label {
+    color: #ffcc00; /* 選中及其左側星星為金黃色 */
+}
+
+/* 當鼠標懸停時，星星及其左側的樣式 */
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #ffcc00; /* 鼠標懸停時，改變星星顏色為金黃色 */
+}
+
+/* 提交按鈕懸停時的樣式 */
+button#submit-review:hover {
+    background-color: #CCD5AE; /* 改變背景顏色為淺綠色 */
+}
+
+/* 評分反饋文字樣式 */
+#rating-feedback {
+    font-style: italic; /* 文字使用斜體 */
+    margin-top: 10px; /* 與上方內容保持距離 */
+    color: green; /* 文字顏色為綠色 */
+}
+
+/* 評論區塊的主要容器樣式 */
+.review-content {
+    display: flex; /* 使用 Flexbox，讓內容橫向排列 */
+    align-items: flex-start; /* 內容頂部對齊 */
+    gap: 20px; /* 左右內容之間的間距 */
+    margin-bottom: 20px; /* 與下方內容保持距離 */
+}
+
+/* 用戶圖片的樣式 */
+.user-image {
+    width: 75px; /* 固定寬度為 75px */
+    height: 75px; /* 固定高度為 75px */
+    border-radius: 18px; /* 設置為圓形圖片 */
+    object-fit: cover; /* 確保圖片比例適配容器 */
+    border: 5px solid #ffffff; /* 白色邊框，增加圖片的突出效果 */
+}
+
+/* 評論文字樣式 */
+.review-text p {
+    margin: 5px 0; /* 每段文字的間距 */
+}
+
+/* footer */
+footer{
+    text-align: center;
+    color: white;
+    padding: 10px;
+    background-color: #d3b495;
+  }

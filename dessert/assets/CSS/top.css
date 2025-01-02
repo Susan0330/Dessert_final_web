@@ -1,0 +1,31 @@
+/* 固定在左下角 */
+.scroll-up {
+    position: fixed; /* 固定位置 */
+    right: 1rem; /* 距離左邊 1rem */
+    bottom: 1rem; /* 距離底部 1rem */
+    z-index: 10; /* 保持在前景 */
+    width: 40px; /* 按鈕寬度 */
+    height: 40px; /* 按鈕高度 */
+    border-radius: 4px; /* 按鈕圓角 */
+    background-color: rgba(29, 29, 31, 0.7); /* 背景顏色 */
+    backdrop-filter: saturate(180%) blur(20px); /* 背景模糊效果 */
+    -webkit-backdrop-filter: saturate(180%) blur(20px); /* Safari 背景模糊效果 */
+    display: flex; /* 彈性盒模型 */
+    align-items: center; /* 垂直置中 */
+    justify-content: center; /* 水平置中 */
+    overflow: hidden; /* 隱藏超出部分 */
+    transition: transform .4s; /* 滑動時的動畫過渡 */
+  }
+  
+  /* 滑鼠懸停效果 */
+  .scroll-up:hover {
+    transform: translateY(-.25rem); /* 上移 0.25rem */
+  }
+  
+  /* 小螢幕適配 */
+  @media (max-width: 1199.98px) {
+    .scroll-up {
+      left: 0.5rem; /* 距離左邊減少到 0.5rem */
+    }
+  }
+  

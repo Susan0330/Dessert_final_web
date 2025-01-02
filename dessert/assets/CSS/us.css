@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Serif TC', serif;
+}
+
+body {
+    background-color: #FEFAE0;
+    color: #534d3e;
+}
+
+
+/*　動態優惠　*/
+/* 滾動文字區塊 */
+.promo-banner {
+    background-color: #FEFAE0; /* 背景顏色 */
+    color: #D5A06C; /* 文字顏色 */
+    font-size: 18px;
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* 確保廣告在最上層 */
+    overflow: hidden; /* 確保文字不會超出容器 */
+}
+
+/* 滾動文字動畫效果 */
+.promo-banner p {
+    white-space: nowrap; /* 不換行 */
+    animation: scroll-text 10s linear infinite; /* 動畫效果 */
+}
+
+/* 動畫效果：從右到左滾動 */
+@keyframes scroll-text {
+    0% {
+        transform: translateX(100%); /* 起始位置：從右側開始 */
+    }
+    100% {
+        transform: translateX(-100%); /* 結束位置：移到左側外面 */
+    }
+}
+
+/* Navbar樣式調整 (確保不被廣告遮擋) */
+.navbar {
+    margin-top: 50px; /* 讓導航欄距離廣告有間距 */
+    background-color: #fff;
+}
+
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d3b495;
+    padding: 10px 30px; /* 減少內邊距以留出更多高度 */
+    position: sticky;
+    z-index: 10;
+    height: 140px; /* 增加 navbar 的高度，確保 logo 有足夠的空間 */
+    box-sizing: border-box; /* 確保 padding 被計入高度內 */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* 添加過渡效果 */
+}
+
+.site-title {
+    margin-left: 10px; /* 圖片和文字的間距 */
+    font-size: 28px; /* 字體大小 */
+    font-weight: bold; /* 字體粗細 */
+    color: #333; /* 字體顏色 */
+    font-family: Arial, Helvetica, sans-serif;/* 字體樣式 */
+    display: inline-block; /* 讓文字和圖片在同一行 */
+}
+
+.navbar.navbar-transparent {
+    background-color: rgba(204, 213, 174, 0.7); /* 透明效果 */
+    box-shadow: none; /* 去掉阴影 */
+}
+
+.logo-link {
+    display: block;
+    margin-left: 95px; /* 調整圖片與選單之間的距離 */
+    display: flex; /* 使用 Flexbox 排列 */
+    align-items: center; /* 垂直對齊圖片 */
+    gap: 10px; /* 圖片之間的間距 */
+}
+
+.index {
+    max-width: none;
+    width: 85px;
+    height: auto;
+    margin-top: 20px; /* 根據需要調整這個數值 */
+}
+
+.index2 {
+    max-width: none;
+    width: 100px;
+    height: auto;
+    margin-top: 20px; /* 根據需要調整這個數值 */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* 選單置中 */
+    flex-grow: 1;
+}
+
+.nav-links li {
+    margin: 0 15px; /* 選單項目間距 */
+    text-align: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.nav-links a:hover {
+    color: white;
+    background-color: #988571;
+}
+
+/* 搜尋框與圖標區域 */
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* 圖標間距 */
+}
+
+.search-container {
+    position: relative; /* 建立定位上下文 */
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px; /* 搜尋框寬度 */
+    height: 30px; /* 搜尋框高度 */
+    padding-right: 30px; /* 預留空間給圖標 */
+    box-sizing: border-box; /* 包含內邊距和邊框 */
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px; /* 放大鏡圖標的水平位置 */
+    width: 18px; /* 放大鏡圖標大小 */
+    height: 18px;
+    pointer-events: none; 
+    top: 50%; 
+    transform: translateY(-50%); /* icon向上移動一點 */
+}
+
+.nav-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icon-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.icon {
+    width: 30px; 
+    height: 30px; 
+}
+
+
+
+/* 關於我們 */
+/* 店家介紹區域樣式 */
+.store-intro {
+    border: 2px solid #d3d3d3; /* 邊框顏色 (淺灰色) */
+    background-color: #ffffff; /* 白底 */
+    padding: 20px; /* 邊框內部的空間 */
+    margin: 20px auto; /* 上下與其他元素的距離 + 置中對齊 */
+    max-width: 90%; /* 限制區塊的寬度，讓左右留空間 */
+    border-radius: 25px; /* 圓角邊框 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加陰影效果 */
+}
+
+.store-intro h2 {
+    font-size: 40px;
+    margin-top: 0; /* 去掉 h2 與邊框的上方間距 */
+    color: #6c584c; /* 標題文字顏色 */
+}
+
+.store-intro p {
+    font-size: 16px; 
+    line-height: 1.6; 
+    margin: 10px 0; 
+    padding-left: 230px; /* 通過左內邊距使文字整體右移 */
+    text-align: left; /* 保持文字左對齊 */
+}
+
+.store-intro .mascot-icon {
+    width: 50px; /* 圖片寬度 */
+    height: auto; /* 保持比例 */
+    margin-left: 10px; /* 文字與圖片的間距 */
+}
+
+
+/* 組員介紹部分 */
+.body2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text h2 {
+    font-size: 40px; 
+    margin-bottom: 10px; 
+    width: 50%;
+    padding-left: 100px; /* 調整左內邊距，原本是 45px */
+    color: #6c584c;
+}
+
+
+.container {
+    max-width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 每行顯示兩個項目 */
+    gap: 20px; /* 設置項目間距 */
+    justify-items: center; /* 水平置中 */
+    padding: 20px;
+}
+
+.item {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    margin: 15px;
+    perspective: 600px;
+}
+
+.img1 {
+    position: absolute;
+    transform-origin: top; /* 從上方開始翻轉 */
+    transform: rotateX(0deg); /* 旋轉X軸 */
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.caption {
+    position: absolute;
+    z-index: 0;
+    background-color: #FAEDCD;
+    color: #6c584c;
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transform-origin: bottom; /* 從底部開始翻轉 */
+    transform: rotateX(-90deg); /* 預設為 -90 度，隱藏 */
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.caption h3 {
+    font-family: 'Noto Serif TC', serif;
+    text-align: center;
+}
+
+.caption p {
+    font-family: 'Noto Serif TC', serif;
+    font-size: 15px;
+}
+
+.item:hover .img1 {
+    transform: rotateX(90deg); /* 當 hover 時，翻轉90度 */
+    opacity: 0;
+}
+
+.item:hover .caption {
+    transform: rotateX(0deg); /* 顯示 caption */
+    opacity: 1;
+}
+
+.us {
+    width: 350px;
+    height: 350px;
+    border-radius: 10px;
+}
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+}
+
+.intro_icon {
+    width: 25%;
+    display: block;
+    margin: auto;
+}
+
+/* 吉祥物圖片 */
+.intro-content {
+    display: flex;
+    align-items: center !important; /* 確保圖片和文字垂直對齊 */
+    gap: 0 !important; /* 去除圖片和文字之間的水平空白 */
+}
+
+.mascot-img {
+    width: 250px !important; /* 設置圖片寬度 */
+    height: auto !important; /* 保持圖片比例 */
+    margin: 0 !important; /* 確保圖片沒有額外邊距 */
+}
+
+.mascot-text {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+    margin: 0 !important; /* 移除上下邊距 */
+    padding-left: 0 !important; /* 移除左內邊距 */
+    text-align: left !important;
+    font-family: 'Noto Serif TC', serif;
+}
+
+
+
+
+
+
+
+/* footer */
+footer{
+    text-align: center;
+    color: white;
+    padding: 10px;
+    background-color: #d3b495;
+  }
+
+/*#99a97c* 深/
+/*#ecf5ce* 淺/

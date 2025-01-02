@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員資訊</title>
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/CSS/information.css">
+    <link rel="stylesheet" href="../assets/CSS/top.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="../assets/JS/information.js" defer></script>
+    <script src="../assets/JS/top.js"></script>
+</head>
+<body>
+    <!-- 回到頂部按鈕 -->
+    <a id="scroll-up" class="scroll-up" href="#">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0h24v24H0z" fill="none"></path>
+        <path fill="rgba(255,255,255,1)" d="M11.9997 10.8284L7.04996 15.7782L5.63574 14.364L11.9997 8L18.3637 14.364L16.9495 15.7782L11.9997 10.8284Z"></path>
+        </svg>
+    </a>
+
+    <!-- 動態優惠 -->
+    <div class="promo-banner">
+        <p>✨\ 新品上市，購買任意甜品就送飲品！ /【活動時間】即日起至 2025/01/31✨</p>
+    </div>
+
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="index.html" class="logo-link">
+          <img src="../assets/images/jump.png" class="index">
+          <img src="../assets/images/logo1.png" class="index2">
+      </a>
+      <ul class="nav-links">
+          <li><a href="us.html">關於我們</a></li>
+          <li><a href="Allproducts.html">所有商品</a></li>
+          <li><a href="information.html">會員資料</a></li>
+      </ul>
+      <div class="navbar-actions">
+          <div class="search-container">
+              <input type="text" placeholder="搜尋..." class="search-input">
+              <a href="" class="search-icon-link"><img src="../assets/images/icon/serach.png" class="search-icon"></a>
+          </div>
+          <div class="nav-icons">
+              <a href="cart.html"><img src="../assets/images/icon/car.png" class="icon"></a>
+              <a href="login.html"><img src="../assets/images/icon/person.png" class="icon"></a>
+          </div>
+      </div>
+    </nav>
+
+    <div class="container">
+        <!-- Tabs -->
+        <div class="info-tabs">
+            <button class="tab-button active-tab" data-tab="member-info">會員資訊</button>
+            <button class="tab-button" data-tab="order-info">訂單資訊</button>
+            <button class="tab-button" data-tab="history-reviews">歷史評論</button>
+        </div>
+
+        <!-- 會員資訊 -->
+        <div class="tab-content" id="member-info">
+            <h2>會員資訊</h2>
+            <hr size="2px" color="black" align="left" width="8%">
+            <div class="member-info">
+                <div class="left-info">
+                    <h3>個人資料</h3>
+                    <hr color="white" size="2px">
+                    <p>會員姓名: <input type="text" id="name" value="滋滋"></p>
+                    <p>會員生日: <input type="date" id="birthday" value="2024-12-14"></p>
+                    <p>會員電話: <input type="text" id="phone" value="0912250359"></p>
+                    <p>電子郵件: <input type="text" id="email" value="clothestou@gmail.com"></p>
+                    <p>聯絡地址: <input type="text" id="address" value="蛋糕市鬆餅路飲料巷25號"></p>
+                </div>
+                <div class="right-info">
+                    <h3>帳號資訊</h3>
+                    <hr color="white" size="2px">
+                    <p>帳號: 
+                        <div class="password-container">
+                            <input type="text" id="username" value="dessertttt">
+                        </div>
+                    </p>
+                    <p>密碼: 
+                        <div class="password-container">
+                            <input type="password" id="password" value="12345678">
+                            <span class="toggle-password" id="toggle-password">
+                                <img src="../assets/images/close.png" alt="隱藏密碼" id="password-icon">
+                            </span>
+                        </div>
+                    </p>
+                    
+                    <p>更改密碼: 
+                        <div class="password-container">
+                            <input type="text" id="new-password" placeholder="輸入新密碼">
+                        </div>
+                    </p>
+                </div>
+            </div>
+            <button id="update-btn">更新資料</button>
+        </div>
+        
+
+        <!-- 訂單資訊 -->
+        <div class="tab-content hidden" id="order-info">
+            <h2>訂單資訊</h2>
+            <hr size="2px" color="black" align="left" width="8%">
+            <!-- 訂單 1 -->
+            <div class="order-container">
+                <h3>訂單編號: CXJ11244112</h3>
+                <p class="order-status">狀態: 待出貨</p>
+                <div class="order-header">
+                    <p>商品圖片</p>
+                    <p>商品名稱</p>
+                    <p>商品價格</p>
+                    <p>購買數量</p>
+                    <p>總額</p>
+                </div>
+                <div class="order-item">
+                    <img src="../assets/images/drinks/hotchocolate.jpg" alt="商品圖片">
+                    <p>熱巧克力</p>
+                    <p>$30</p>
+                    <p>2</p>
+                    <p>$60</p>
+                </div>
+                <div class="order-item">
+                    <img src="../assets/images/muffins/fresh fruit.png" alt="商品圖片">
+                    <p>鮮果拼盤鬆餅</p>
+                    <p>$250</p>
+                    <p>1</p>
+                    <p>$250</p>
+                </div>
+                <p class="order-total">總金額: $310</p>
+            </div>
+            <!-- 訂單 2 -->
+            <div class="order-container">
+                <h3>訂單編號: WYJ11244120</h3>
+                <p class="order-status">狀態: 已完成</p>
+                <div class="order-header">
+                    <p>商品圖片</p>
+                    <p>商品名稱</p>
+                    <p>商品價格</p>
+                    <p>購買數量</p>
+                    <p>總額</p>
+                </div>
+                <div class="order-item">
+                    <img src="../assets/images/muffins/banana chocolate.png" alt="商品圖片">
+                    <p>香蕉巧克力鬆餅</p>
+                    <p>$180</p>
+                    <p>1</p>
+                    <p>$180</p>
+                </div>
+                <div class="order-item">
+                    <img src="../assets/images/jasicookie/j lemon.jpeg" alt="商品圖片">
+                    <p>檸檬夾心曲奇餅乾</p>
+                    <p>$90</p>
+                    <p>2</p>
+                    <p>$180</p>
+                </div>
+                <div class="order-item">
+                    <img src="../assets/images/drinks/CeylonBlackTea.jpg" alt="商品圖片">
+                    <p>錫蘭紅茶</p>
+                    <p>$25</p>
+                    <p>2</p>
+                    <p>$50</p>
+                </div>
+                <p class="order-total">總金額: $410</p>
+            </div>
+            <!-- 訂單 3 -->
+            <div class="order-container">
+                <h3>訂單編號: CYP11244155</h3>
+                <p class="order-status">狀態: 已取消</p>
+                <div class="order-header">
+                    <p>商品圖片</p>
+                    <p>商品名稱</p>
+                    <p>商品價格</p>
+                    <p>購買數量</p>
+                    <p>總額</p>
+                </div>
+                <div class="order-item">
+                    <img src="../assets/images/cake/caramel.png" alt="商品圖片">
+                    <p>焦糖巴斯克</p>
+                    <p>$150</p>
+                    <p>3</p>
+                    <p>$450</p>
+                </div>
+                <p class="order-total">總金額: $450</p>
+            </div>
+        </div>
+        
+        
+        <!-- 歷史評論 -->
+        <div class="tab-content hidden" id="history-reviews">
+            <h2>歷史評論</h2>
+            <hr size="2px" color="black" align="left" width="8%">
+            <table class="review-table">
+                <thead>
+                    <tr>
+                        <th>評論商品</th>
+                        <th>評論內容</th>
+                        <th>星等</th>
+                        <th>評論日期</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="../assets/images/muffins/banana chocolate.png" alt="商品圖片"></td>
+                        <td>香蕉跟巧克力簡直是絕配!</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td>2024/12/03</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../assets/images/jasicookie/j lemon.jpeg" alt="商品圖片"></td>
+                        <td>價格合理，餅乾酥脆，但檸檬內餡有點酸</td>
+                        <td>⭐⭐⭐⭐☆</td>
+                        <td>2024/12/03</td>
+                    </tr>
+                    <tr>
+                        <td><img src="../assets/images/drinks/CeylonBlackTea.jpg" alt="商品圖片"></td>
+                        <td>口感滑順甘甜，會再次回購的!</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                        <td>2024/12/03</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+    <!-- footer --> 
+   <footer>
+    <p>Copyright © 滋館</p>
+   </footer>
+        
+    </div>
+</body>
+</html>

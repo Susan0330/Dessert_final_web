@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>購物車</title>
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/CSS/styles.css">
+    <link rel="stylesheet" href="../assets/CSS/top.css">
+    <script src="../assets/JS/top.js"></script>
+</head>
+
+<body>
+    <!-- 回到頂部按鈕 -->
+    <a id="scroll-up" class="scroll-up" href="#">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0h24v24H0z" fill="none"></path>
+        <path fill="rgba(255,255,255,1)" d="M11.9997 10.8284L7.04996 15.7782L5.63574 14.364L11.9997 8L18.3637 14.364L16.9495 15.7782L11.9997 10.8284Z"></path>
+        </svg>
+    </a>
+    <!-- 動態優惠 -->
+    <div class="promo-banner">
+      <p>✨\ 新品上市，購買任意甜品就送飲品！ /【活動時間】即日起至 2025/01/31✨</p>
+    </div>
+  
+  
+      <!-- Navbar -->
+      <nav class="navbar">
+        <a href="index.html" class="logo-link">
+            <img src="../assets/images/jump.png" class="index">
+            <img src="../assets/images/logo1.png" class="index2">
+        </a>
+        <ul class="nav-links">
+            <li><a href="us.html">關於我們</a></li>
+            <li><a href="Allproducts.html">所有商品</a></li>
+            <li><a href="information.html">會員資料</a></li>
+        </ul>
+        <div class="navbar-actions">
+            <div class="search-container">
+                <input type="text" placeholder="搜尋..." class="search-input">
+                <a href="" class="search-icon-link"><img src="../assets/images/icon/serach.png" class="search-icon"></a>
+            </div>
+            <div class="nav-icons">
+                <a href="cart.html"><img src="../assets/images/icon/car.png" class="icon"></a>
+                <a href="login.html"><img src="../assets/images/icon/person.png" class="icon"></a>
+            </div>
+        </div>
+    </nav>
+    <!--購物車部分-->
+    <main><!--頁面的核心-->
+        <div class="steps">
+            <span class="step active">1. 購物車</span><!--step 類別表示步驟，active 則代表當前步驟-->
+            <span class="arrow">→</span>
+            <span class="step">2. 填寫資料</span>
+            <span class="arrow">→</span>
+            <span class="step">3. 送出訂單</span>
+        </div>
+        <section><!--頁面內的某個區塊-->
+            <h1>購物車</h1>
+            <table style="background-color: #e9edc9;">
+                <thead><!--表格的表頭 標題列-->
+                    <tr>
+                        <th>商品圖片</th>
+                        <th>商品</th>
+                        <th>單價</th>
+                        <th>數量</th>
+                        <th>總計</th>
+                    </tr>
+                </thead>
+                <tbody><!--表格的主體 實際商品資料-->
+                    <tr>
+                        <td>
+                            <div class="image-container"><!--包裹圖片的容器，讓圖片置中且不變形。-->
+                                <a href="product/muffin/red bean matcha.html">
+                                <img src="../assets/images/muffins/red bean matcha.png" width="200" height="120" alt="宇治抹茶紅豆鬆餅"></a>
+                            </div>
+                        </td>
+                        <td>宇治抹茶紅豆鬆餅</td>
+                        <td>NT$ 230</td>
+                        <td>
+                            <input type="number" value="1" min="1" class="item-quantity" data-price="230"><!--儲存商品價格-->
+                        </td>
+                        <td class="item-total">NT$ 230</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="image-container">
+                                <a href="product/drink/Ceylon Black Tea.html">
+                                <img src="../assets/images/drinks/CeylonBlackTea.jpg" width="170" height="180" alt="錫蘭紅茶"></a>
+                            </div>
+                        </td>
+                        <td>錫蘭紅茶</td>
+                        <td>NT$ 25</td>
+                        <td>
+                            <input type="number" value="1" min="1" class="item-quantity" data-price="25"><!--自訂屬性，儲存該商品單價 後續 JavaScript 計算總金額-->
+                        </td>
+                        <td class="item-total">NT$ 25</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="cart-summary">
+                <p>小計：<span id="subtotal">NT$ 255</span></p><!--嵌入計算結果-->
+                <p>運費：<span id="shipping">NT$ 60</span></p>
+                <p>合計：<span id="total">NT$ 315</span></p>
+                <button class="btn-next" onclick="saveCartData()">前往結帳</button>
+            </div>
+        </section>
+    </main>
+    <script src="../assets/JS/script.js"></script>
+
+    <footer>
+        <p>Copyright © 滋館</p>
+    </footer> 
+</body>
+</html>

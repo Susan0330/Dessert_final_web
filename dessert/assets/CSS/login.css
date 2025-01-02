@@ -1,0 +1,295 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url(../images/background2.jpg); /* 確保路徑正確，刪除多餘的反斜線 */
+    background-size: cover; /* 圖片填滿整個背景 */
+    background-position: center; /* 圖片居中顯示 */
+    background-repeat: no-repeat; /* 防止背景圖片重複 */
+    height: 100vh; /* 背景高度覆蓋整個視窗 */
+    width: 100vw; /* 確保寬度同樣覆蓋整個視窗 */
+    overflow: hidden; /* 防止出現滾動條 */
+    display: flex; /* 方便內容居中 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+}
+
+#home-link {
+    position: fixed; /* 固定位置 */
+    top: 50px; /* 距離頂部 1rem */
+    right: 15px; /* 距離右邊 1rem */
+    z-index: 1000; /* 確保圖片顯示在最上層 */
+}
+
+.home-icon {
+    width: 250px; /* 圖片寬度，可自行調整 */
+    height: auto; /* 保持圖片比例 */
+    cursor: pointer; /* 鼠標指針顯示為點擊手勢 */
+}
+
+/*　動態優惠　*/
+/* 滾動文字區塊 */
+.promo-banner {
+    background-color: #FEFAE0; 
+    color: #D5A06C; 
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* 確保廣告在最上層 */
+    overflow: hidden; 
+}
+
+/* div box styling */
+.container {
+    width: 650px; /* 固定寬度 */
+    height: 550px; /* 固定高度 */
+    transform-origin: top left; /* 設定縮放基準點 */
+    transform: scale(calc(100vw / 650), calc(100vh / 550)); /* 根據螢幕大小縮放 */
+
+}
+
+.welcome {
+    background: #f6f6f6;
+    width: 650px;
+    height: 415px;
+    position: absolute;
+    top: 25%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.colorbox {
+    position: absolute;
+    top: -10%;
+    left: 5%;
+    background: #E9EDC9;
+    width: 320px;
+    height: 500px;
+    border-radius: 5px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    transition: all .5s ease-in-out;
+    z-index: 2;
+    transform: translateX(0%);
+}
+
+.nodisplay {
+    display: none;
+    transition: all 0.5s ease;
+}
+
+.leftbox,
+.rightbox {
+    position: absolute;
+    width: 50%;
+    transition: 1s all ease;
+
+}
+  
+.leftbox {
+    left: -2%;
+}
+  
+.rightbox {
+    right: -2%;
+}
+
+/* font & button styling */
+h1{
+    font-family: DynaPuff;
+    text-align: center;
+    margin-top: 95px;
+    text-transform: uppercase;
+    color: black;
+    font-size: 2em;
+    letter-spacing: 8px;
+}
+
+.high{
+    margin-top: 30px;
+}
+
+.title {
+    font-family: 'Lora', serif;
+    color: #8E9AAF;
+    font-size: 1.8em;
+    line-height: 1.1em;
+    letter-spacing: 3px;
+    text-align: center;
+    font-weight: 300;
+    margin-top: 20%;
+}
+
+h1, .title {
+    font-size: min(2em, 4vw); /* 字體大小與螢幕寬度成比例，但不超過2em */
+}
+  
+.desc {
+    margin-top: -8px;
+}
+  
+.account {
+    margin-top: 45%;
+    font-size: 10px;
+}
+  
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: min(0.7em, 2vw); /* 段落字體自適應 */
+    letter-spacing: 2px;
+    color: #8E9AAF;
+    text-align: center;
+}
+  
+span {
+    color: #EAC7CC;
+}
+  
+.flower {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    top: 46%;
+    left: 29%;
+    opacity: 0.7;
+}
+  
+.smaller {
+    width: 130px;
+    height: 140px;
+    top: 45%;
+    left: 30%;
+    opacity: 0.9;
+}
+
+button {
+    padding: 12px;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 11px;
+    border-radius: 10px;
+    margin: auto;
+    outline: none;
+    display: block;
+}
+  
+button:hover {
+    background: #EAC7CC;
+    color: #f6f6f6;
+    transition: background-color 1s ease-out;
+}
+  
+.button {
+    margin-top: 3%;
+    background: #f6f6f6;
+    color: #D4A373;
+    border: solid 1px #EAC7CC;
+}
+
+
+
+/* form styling */
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 7px;
+}
+
+.more-padding {
+    padding-top: 35px;
+}
+  
+.more-padding input {
+    padding: 12px;
+}
+  
+.more-padding .submit {
+    margin-top: 45px;
+}
+  
+.submit {
+    margin-top: 15px;
+    padding: 12px;
+    border-color: #D4A373;
+}
+  
+.submit:hover {
+    background: #CCD5AE;
+    border-color: #B3A3BF;
+}
+
+input {
+    background: #FEFAE0;
+    width: 65%;
+    color: #D4A373;
+    border: none;
+    border-bottom: 1px solid rgba(246, 246, 246, 0.5);
+    padding: 9px;
+    margin: 5px;
+}
+  
+input::placeholder {
+    color: rgb(175, 175, 175);
+    letter-spacing: 2px;
+    font-size: 1.3em;
+    font-weight: 100;
+}
+  
+input:focus {
+    color: #D4A373;
+    outline: none;
+    border-bottom: 1.2px solid #a37e58;
+    font-size: 1em;
+    transition: 0.8s all ease;
+}
+  
+input:focus::placeholder {
+    opacity: 0;
+}
+  
+label {
+    font-family: 'Open Sans', sans-serif;
+    color: #CC9BAF;
+    font-size: 0.8em;
+    letter-spacing: 1px;
+}
+  
+.checkbox {
+    display: inline;
+    white-space: nowrap;
+    position: relative;
+    left: -62px;
+    top: 5px;
+}
+  
+input[type=checkbox] {
+    width: 7px;
+    background: #CC9BAF;
+}
+  
+.checkbox input[type="checkbox"]:checked + label {
+    color: #D4A373;
+    transition: 0.5s all ease;
+}
+
+input {
+    font-size: 1em; /* 基本字體大小，不受transform影響 */
+    width: 75%; /* 保持相對寬度 */
+    max-width: 300px; /* 設置最大寬度 */
+}
+
+/* footer */
+footer{
+    text-align: center;
+    position: relative; /* 使用 relative */
+    bottom: 0;
+    width: 100%;
+    margin-top: auto; /* 讓它隨內容推動到底部 */
+    color: white;
+    padding: 10px;
+    background-color: #CCD5AE;
+}

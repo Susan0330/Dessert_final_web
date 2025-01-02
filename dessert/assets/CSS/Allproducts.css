@@ -1,0 +1,279 @@
+body {
+    background-color: #fefae0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Serif TC', serif;
+}
+
+body {
+    background-color: #FEFAE0;
+    color: #534d3e;
+}
+
+/*　動態優惠　*/
+/* 滾動文字區塊 */
+.promo-banner {
+    background-color: #FEFAE0; 
+    color: #D5A06C; 
+    text-align: center;
+    padding: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* 確保廣告在最上層 */
+    overflow: hidden; 
+}
+
+/* 滾動文字動畫效果 */
+.promo-banner p {
+    white-space: nowrap; 
+    animation: scroll-text 10s linear infinite; 
+}
+
+/* 動畫效果：從右到左滾動 */
+@keyframes scroll-text {
+    0% {
+        transform: translateX(100%); /* 起始位置：從右側開始 */
+    }
+    100% {
+        transform: translateX(-100%); /* 結束位置：移到左側外面 */
+    }
+}
+
+/* Navbar樣式調整 (確保不被廣告遮擋) */
+.navbar {
+    margin-top: 50px; /* 讓導航欄距離廣告有間距 */
+    background-color: #fff;
+}
+.navbar {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* 添加过渡效果 */
+}
+
+.navbar.navbar-transparent {
+    background-color: rgba(204, 213, 174, 0.7); /* 透明效果 */
+    box-shadow: none; /* 去掉阴影 */
+}
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #d3b495;
+    padding: 10px 30px; /* 減少內邊距以留出更多高度 */
+    position: sticky;
+    z-index: 10;
+    height: 140px; /* 增加 navbar 的高度，確保 logo 有足夠的空間 */
+    box-sizing: border-box; /* 確保 padding 被計入高度內 */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* 添加過渡效果 */
+}
+
+.logo-link {
+    display: block;
+    margin-left: 95px; /* 調整圖片與選單之間的距離 */
+    display: flex; /* 使用 Flexbox 排列 */
+    align-items: center; /* 垂直對齊圖片 */
+    gap: 10px; /* 圖片之間的間距 */
+}
+
+.index {
+    max-width: none;
+    width: 85px;
+    height: auto;
+    margin-top: 20px; /* 根據需要調整這個數值 */
+}
+
+.index2 {
+    max-width: none;
+    width: 100px;
+    height: auto;
+    margin-top: 20px; /* 根據需要調整這個數值 */
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center; 
+    flex-grow: 1;
+}
+
+.nav-links li {
+    margin: 0 15px; /* 選單項目間距 */
+    text-align: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+.nav-links a:hover {
+    color: white;
+    background-color: #988571;
+}
+
+/* 搜尋框與圖標區域 */
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* 圖標間距 */
+}
+
+.search-container {
+    position: relative; /* 建立定位上下文 */
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px; /* 搜尋框寬度 */
+    height: 30px; /* 搜尋框高度 */
+    padding-right: 30px; /* 預留空間給圖標 */
+    box-sizing: border-box; /* 包含內邊距和邊框 */
+}
+
+/* 放大鏡圖標 */
+.search-icon {
+    position: absolute;
+    right: 10px; 
+    width: 18px; 
+    height: 18px;
+    pointer-events: none; 
+    top: 50%; 
+    transform: translateY(-50%); /* icon向上移動一點 */
+}
+
+.nav-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.icon-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.icon {
+    width: 30px; 
+    height: 30px; 
+}
+
+
+/* footer */
+footer{
+    text-align: center;
+    color: white;
+    padding: 10px;
+    background-color: #d3b495;
+  }
+
+header .icons {
+    display: flex;
+    gap: 15px;
+}
+section {
+    max-width: 800px; /* 限制內容最大寬度 */
+    margin: 0 auto; /* 水平居中 */
+    padding: 20px;
+}
+.product {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 15px;
+    background-color: #ccd5ae;
+    border-radius: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.product img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+}
+.product .info {
+    flex-grow: 1;
+}
+.product .info h3 {
+    margin: 0;
+    font-size: 20px;
+    color:#1d3557;
+}
+.product .info p {
+    margin: 5px 0 0;
+    color: #666;
+}
+
+
+
+
+.product {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid ;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px;
+    overflow: hidden;
+    margin-bottom: 1.25rem;
+}
+.product .mascot {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 60px;
+    height: auto;
+    animation: jump 1.5s infinite ease-in-out;
+}
+
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+a {
+    text-decoration: none; /* 移除底線 */
+    
+}
+
+a:hover {
+    color: #b39084; /* 滑鼠懸停時改變顏色（可選） */
+}
+

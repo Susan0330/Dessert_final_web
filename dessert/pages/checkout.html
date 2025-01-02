@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>填寫資料</title>
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/CSS/styles.css">
+    <link rel="stylesheet" href="../assets/CSS/top.css">
+    <script src="../assets/JS/top.js"></script>
+</head>
+
+<body>
+      <!-- 回到頂部按鈕 -->
+  <a id="scroll-up" class="scroll-up" href="#">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="none"></path>
+      <path fill="rgba(255,255,255,1)" d="M11.9997 10.8284L7.04996 15.7782L5.63574 14.364L11.9997 8L18.3637 14.364L16.9495 15.7782L11.9997 10.8284Z"></path>
+    </svg>
+  </a>
+  <!-- 動態優惠 -->
+  <div class="promo-banner">
+    <p>✨\ 新品上市，購買任意甜品就送飲品！ /【活動時間】即日起至 2025/01/31✨</p>
+  </div>
+
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <a href="index.html" class="logo-link">
+          <img src="../assets/images/jump.png" class="index">
+          <img src="../assets/images/logo1.png" class="index2">
+      </a>
+      <ul class="nav-links">
+          <li><a href="us.html">關於我們</a></li>
+          <li><a href="Allproducts.html">所有商品</a></li>
+          <li><a href="information.html">會員資料</a></li>
+      </ul>
+      <div class="navbar-actions">
+          <div class="search-container">
+              <input type="text" placeholder="搜尋..." class="search-input">
+              <a href="" class="search-icon-link"><img src="../assets/images/icon/serach.png" class="search-icon"></a>
+          </div>
+          <div class="nav-icons">
+              <a href="cart.html"><img src="../assets/images/icon/car.png" class="icon"></a>
+              <a href="login.html"><img src="../assets/images/icon/person.png" class="icon"></a>
+          </div>
+      </div>
+  </nav>
+    <!--購物車-->
+    <main>
+        <div class="steps">
+            <span class="step">1. 購物車</span>
+            <span class="arrow">→</span>
+            <span class="step active">2. 填寫資料</span>
+            <span class="arrow">→</span>
+            <span class="step">3. 送出訂單</span>
+        </div>
+        <section id="checkout-section"><!--section通常用來包裝頁面中的特定功能區域 id 屬性賦予此區塊唯一識別符號-->
+            <h1>填寫資料</h1>
+            <table style="background-color: #e9edc9;"><!--整個表格設定背景顏色為淡綠色 (#e9edc9)，提升視覺區隔效果-->
+                <tr>
+                    <th>顧客名稱</th>
+                    <td><input type="text" id="customer-name" placeholder="Name"></td><!--id="customer-name"輸入框設置唯一識別名稱 placeholder提示文字，當輸入框為空時顯示，指引顧客輸入姓名-->
+                </tr>
+                <tr>
+                    <th>電子信箱</th>
+                    <td><input type="email" id="customer-email" placeholder="Email"></td>
+                    <span id="email-error" style="color: red; font-size: 0.9em;"></span> <!--span id="email-error"錯誤提示區塊，初始為空白。當輸入不正確時，透過 JS 顯示錯誤訊息，紅色標示警告。-->
+                </tr>
+                <tr>
+                    <th>電話號碼</th>
+                    <td><input type="tel" id="customer-phone" placeholder="Number"></td>
+                    <span id="phone-error" style="color: red; font-size: 0.9em;"></span><!--話輸入錯誤提示區塊，顯示格式錯誤訊息。-->
+                </tr>
+                <tr>
+                    <th>收件地址</th>
+                    <td><input type="text" id="recipient-address" placeholder="Address"></td>
+                </tr>
+                <tr>
+                    <th>付款方式</th>
+                    <td>
+                        <select id="payment-method"><!--select下拉式選單供用戶選擇付款方式-->
+                            <option>請選擇付款方式</option><!--選項內容-->
+                            <option>信用卡</option>
+                            <option>貨到付款</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <div class="button-group"><!--包住兩個按鈕，使用 CSS 控制按鈕的排版與樣式-->
+                <button class="btn-next" onclick="history.back()">回上一頁</button><!--點擊「回上一頁」時，瀏覽器回到上一個頁面-->
+                <button class="btn-next" onclick="saveCustomerData()">下一步</button><!--執行 JS 函式 saveCustomerData()通常用於儲存顧客填寫的資料並跳轉到結帳頁面-->
+            </div>
+        </section>        
+    </main>
+    <script src="../assets/JS/script.js"></script>
+
+   <footer>
+        <p>Copyright © 滋館</p>
+   </footer> 
+</body>
+
+</html>
+

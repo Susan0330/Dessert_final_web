@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/CSS/login.css">
+    <link rel="stylesheet" href="../assets/CSS/top.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../assets/JS/login.js"></script>
+    <script src="../assets/JS/top.js"></script>
+    <title>會員登入及註冊</title>
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <a href="index.html" id="home-link">
+        <img src="../assets/images/backto.png" alt="Home" class="home-icon">
+    </a>
+    <!-- 回到頂部按鈕 -->
+    <a id="scroll-up" class="scroll-up" href="#">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0h24v24H0z" fill="none"></path>
+        <path fill="rgba(255,255,255,1)" d="M11.9997 10.8284L7.04996 15.7782L5.63574 14.364L11.9997 8L18.3637 14.364L16.9495 15.7782L11.9997 10.8284Z"></path>
+        </svg>
+    </a>
+
+      <!-- 動態優惠 -->
+  <div class="promo-banner">
+    <p>✨\ 新品上市，購買任意甜品就送飲品！ /【活動時間】即日起至 2025/01/31✨</p>
+  </div>
+
+    <div class="container">
+        <div class="welcome">
+            <div class="colorbox">
+
+                <div class="signup nodisplay">
+                    <h1 class="high">REGISTER</h1>
+                    <form autocomplete="off">
+                        <input type="text" placeholder="使用者名稱">
+                        <input type="text" placeholder="會員姓名">
+                        <input type="date" placeholder="會員生日">
+                        <input type="text" placeholder="會員電話">
+                        <input type="email" placeholder="電子郵件">
+                        <input type="password" placeholder="密碼">
+                        <input type="password" placeholder="確認密碼">
+                        <button class="button submit" id="create-account-btn">建立帳戶</button>
+                    </form>
+                </div>
+
+                <div class="signin">
+                    <h1>LOGIN</h1>
+                    <form class="more-padding" autocomplete="off">
+                        <input type="text" placeholder="使用者名稱">
+                        <input type="password" placeholder="密碼">
+                        <div class="checkbox">
+                            <input type="checkbox" id="remember" /><label for="remember">記住我</label>
+                        </div>
+                        <button class="button submit" id="login-btn">登入</button>
+                    </form>
+                </div>
+              </div> 
+              <div class="leftbox">
+                    <h2 class="title">歡迎加入<br><span>滋館</span>的世界!</h2>
+                    <p class="desc"> 選擇你最愛的 <span>甜點</span></p>
+                    <img class="flower smaller" src="../assets/images/rabbit/ra4.png" alt="">
+                    <p class="account">有帳戶嗎？</p>
+                    <button class="button" id="signin">登入</button>
+              </div>
+              <div class="rightbox">
+                    <h2 class="title"><span>滋</span>館<br>甜點專賣店</h2>
+                    <p class="desc"> 選購你最愛的 <span>甜點</span></p>
+                    <img class="flower smaller" src="../assets/images/rabbit/ra2.png" alt="">
+                    <p class="account">沒有帳戶嗎？</p>
+                    <button class="button" id="signup">註冊</button>
+              </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
